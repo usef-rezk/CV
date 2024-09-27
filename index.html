@@ -4,194 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Rezk - Mechanical Design Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* General Styling */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            background: url('https://via.placeholder.com/1500') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
         }
         .container {
-            width: 800px;
-            margin: 40px auto;
+            max-width: 1000px;
+            margin: 60px auto;
             background-color: #fff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             padding: 40px;
             border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease-in-out forwards;
         }
         h1 {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-size: 48px;
+            color: #007acc;
             letter-spacing: 2px;
+            margin-bottom: 10px;
         }
         h2 {
-            font-size: 18px;
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-            margin-top: 20px;
-            color: #333;
-        }
-        .contact-info, .education, .skills, .experience, .projects, .training, .languages {
-            margin-bottom: 20px;
-        }
-        .contact-info p, .education p, .skills ul, .experience p, .projects p, .training ul, .languages p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-        }
-        .skills ul, .training ul {
-            list-style-type: square;
-            padding-left: 20px;
-        }
-        .experience p, .projects p {
-            margin: 10px 0;
-        }
-        .contact-info p {
-            line-height: 1.8;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .contact-info h2 {
             font-size: 20px;
-            text-align: left;
-        }
-        .two-column {
-            display: flex;
-            justify-content: space-between;
-        }
-        .two-column div {
-            width: 48%;
-        }
-        /* Styling the header to look modern */
-        .header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
             margin-bottom: 20px;
         }
-        .header h1 {
-            margin: 0;
-            font-size: 28px;
-            font-weight: bold;
-            color: #333;
+        p, ul {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
         }
-        .header h2 {
-            font-size: 18px;
-            color: #777;
-            margin-top: 10px;
-        }
-        /* Contact Information Layout */
-        .contact-info {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-        }
-        .contact-info p {
-            margin: 5px 0;
-        }
-        .education, .skills, .projects, .experience, .training, .languages {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        /* Styling the skills and lists */
         ul {
-            margin: 10px 0;
-            padding-left: 20px;
+            list-style: disc;
+            margin-left: 20px;
         }
-        ul li {
-            margin-bottom: 5px;
+        /* Section styling */
+        .section {
+            margin-bottom: 40px;
         }
-        /* Ensuring media responsiveness */
-        @media screen and (max-width: 768px) {
+        /* Progress Bars for Skills */
+        .skill-bar {
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            width: 100%;
+            height: 20px;
+        }
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            background-color: #007acc;
+            text-align: right;
+            padding-right: 10px;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        /* Animation on scroll */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease-in-out forwards;
+        }
+        .section:nth-child(odd) .fade-in {
+            animation-delay: 0.3s;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .container {
-                width: 100%;
                 padding: 20px;
+                width: 90%;
             }
-            .two-column {
-                flex-direction: column;
+            h1 {
+                font-size: 36px;
             }
-            .two-column div {
-                width: 100%;
+            h2 {
+                font-size: 18px;
+            }
+            p, ul {
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>Ahmed Rezk</h1>
-            <h2>Mechanical Design Engineer</h2>
-        </div>
+        <!-- Header -->
+        <h1>Ahmed Rezk</h1>
+        <h2>Mechanical Design Engineer</h2>
 
         <!-- Contact Information -->
-        <div class="section contact-info">
+        <div class="section fade-in">
             <h2>Contact</h2>
             <p>Phone: +20-10-1553-6650</p>
             <p>Email: ark4473@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-rizk-az99/">https://www.linkedin.com/in/ahmed-rizk-az99/</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-rizk-az99/">linkedin.com/in/ahmed-rizk-az99/</a></p>
             <p>Location: Nasr City, Cairo</p>
         </div>
 
-        <!-- Education Section -->
-        <div class="section education">
+        <!-- Education -->
+        <div class="section fade-in">
             <h2>Education</h2>
-            <p><strong>Al-Azhar University</strong> - Bachelor of Mechanical Engineering (2017-2022)</p>
+            <p><strong>Al-Azhar University</strong> - Bachelor's in Mechanical Engineering (2017-2022)</p>
         </div>
 
-        <!-- Skills Section -->
-        <div class="section skills">
+        <!-- Skills -->
+        <div class="section fade-in">
             <h2>Skills</h2>
-            <ul>
-                <li>Machine Elements Design</li>
-                <li>CAD Design: SolidWorks, Sheet Metal, Weldments</li>
-                <li>Lean Manufacturing</li>
-                <li>Material Selection</li>
-                <li>Reverse Engineering</li>
-                <li>Finite Element Analysis (FEA)</li>
-                <li>Microsoft Office</li>
-                <li>Soft Skills: Communication, Teamwork, Problem-Solving</li>
-            </ul>
+            <div class="skill-bar">
+                <span style="width: 90%;">Machine Elements Design - 90%</span>
+            </div>
+            <div class="skill-bar">
+                <span style="width: 85%;">CAD Design: SolidWorks, Sheet Metal - 85%</span>
+            </div>
+            <div class="skill-bar">
+                <span style="width: 80%;">Lean Manufacturing - 80%</span>
+            </div>
+            <div class="skill-bar">
+                <span style="width: 75%;">Finite Element Analysis (FEA) - 75%</span>
+            </div>
         </div>
 
-        <!-- Experience Section -->
-        <div class="section experience">
+        <!-- Work Experience -->
+        <div class="section fade-in">
             <h2>Work Experience</h2>
-            <div>
-                <strong>Production Engineer</strong> <br> Sumitomo Electric Wiring Systems, Egypt (June 2024 - Present)
-                <p>Observed and improved manufacturing processes. Applied lean manufacturing principles.</p>
-            </div>
-            <div>
-                <strong>Production Engineer</strong> <br> EIDG (Jan 2024 - June 2024)
-                <p>Analyzed processes and supervised production quality. Acquired ISO 9001 standards knowledge.</p>
-            </div>
+            <p><strong>Production Engineer</strong> - Sumitomo Electric Wiring Systems (June 2024 - Present)</p>
+            <p>Implemented lean manufacturing principles to improve efficiency.</p>
+            <p><strong>Production Engineer</strong> - EIDG (Jan 2024 - June 2024)</p>
+            <p>Supervised production processes, reducing defect rates.</p>
         </div>
 
-        <!-- Projects Section -->
-        <div class="section projects">
+        <!-- Projects & Achievements -->
+        <div class="section fade-in">
             <h2>Projects & Achievements</h2>
-            <p><strong>Multi-Axis CNC Router Machine</strong> (2021-2022) <br>
-                Designed and manufactured a CNC Router machine using SolidWorks, FEA, and other design software.
-            </p>
-            <p><strong>Electric Vehicle Design</strong> (2021-2022) <br>
-                Designed and built an electric vehicle, awarded second place in a national competition.
-            </p>
+            <p><strong>Multi-Axis CNC Router Machine</strong> (2021-2022)</p>
+            <p>Designed and manufactured a CNC router using SolidWorks and FEA tools.</p>
+            <p><strong>Electric Vehicle Design</strong> (2021-2022)</p>
+            <p>Awarded 2nd place for Electric Vehicle Design, incorporating advanced FEA analysis and CAD.</p>
         </div>
 
-        <!-- Training Section -->
-        <div class="section training">
+        <!-- Courses & Training -->
+        <div class="section fade-in">
             <h2>Courses & Training</h2>
             <ul>
                 <li>CSWP Cert Prep Course - UDEMY</li>
                 <li>Sheet Metal Works - Ali Nasser</li>
                 <li>CNC Programming & Milling Machine - Siemens</li>
-                <li>ISO 9001 & Lean Manufacturing - EIDG</li>
             </ul>
         </div>
 
-        <!-- Languages Section -->
-        <div class="section languages">
+        <!-- Languages -->
+        <div class="section fade-in">
             <h2>Languages</h2>
             <p>Arabic (Native), English (Fluent)</p>
         </div>
