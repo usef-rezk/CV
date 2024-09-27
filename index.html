@@ -3,42 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Rezk - CV</title>
+    <title>Ahmed Rezk - Mechanical Design Engineer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            background-color: #f9f9f9;
+            margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 800px;
+            margin: 40px auto;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
         }
         h1 {
             text-align: center;
-            color: #333;
+            font-size: 36px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
         }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
+        h2 {
+            font-size: 18px;
             border-bottom: 2px solid #333;
             padding-bottom: 5px;
+            margin-top: 20px;
             color: #333;
         }
-        .contact-info, .education, .skills, .experience, .projects, .training {
-            margin-bottom: 15px;
+        .contact-info, .education, .skills, .experience, .projects, .training, .languages {
+            margin-bottom: 20px;
+        }
+        .contact-info p, .education p, .skills ul, .experience p, .projects p, .training ul, .languages p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .skills ul, .training ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        .experience p, .projects p {
+            margin: 10px 0;
+        }
+        .contact-info p {
+            line-height: 1.8;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .contact-info h2 {
+            font-size: 20px;
+            text-align: left;
+        }
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .two-column div {
+            width: 48%;
+        }
+        /* Styling the header to look modern */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+        .header h2 {
+            font-size: 18px;
+            color: #777;
+            margin-top: 10px;
+        }
+        /* Contact Information Layout */
+        .contact-info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .education, .skills, .projects, .experience, .training, .languages {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        /* Styling the skills and lists */
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        /* Ensuring media responsiveness */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+            .two-column {
+                flex-direction: column;
+            }
+            .two-column div {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ahmed Rezk - Mechanical Design Engineer</h1>
-        
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Ahmed Rezk</h1>
+            <h2>Mechanical Design Engineer</h2>
+        </div>
+
+        <!-- Contact Information -->
         <div class="section contact-info">
             <h2>Contact</h2>
             <p>Phone: +20-10-1553-6650</p>
@@ -46,12 +133,14 @@
             <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-rizk-az99/">https://www.linkedin.com/in/ahmed-rizk-az99/</a></p>
             <p>Location: Nasr City, Cairo</p>
         </div>
-        
+
+        <!-- Education Section -->
         <div class="section education">
             <h2>Education</h2>
             <p><strong>Al-Azhar University</strong> - Bachelor of Mechanical Engineering (2017-2022)</p>
         </div>
-        
+
+        <!-- Skills Section -->
         <div class="section skills">
             <h2>Skills</h2>
             <ul>
@@ -62,29 +151,49 @@
                 <li>Reverse Engineering</li>
                 <li>Finite Element Analysis (FEA)</li>
                 <li>Microsoft Office</li>
-                <li>Soft Skills: Good communication, teamwork, and adaptability</li>
+                <li>Soft Skills: Communication, Teamwork, Problem-Solving</li>
             </ul>
         </div>
-        
+
+        <!-- Experience Section -->
         <div class="section experience">
             <h2>Work Experience</h2>
-            <p><strong>Production Engineer</strong> - Sumitomo Electric Wiring Systems (June 2024 - Present)</p>
-            <p><strong>Production Engineer</strong> - EIDG (Jan 2024 - June 2024)</p>
+            <div>
+                <strong>Production Engineer</strong> <br> Sumitomo Electric Wiring Systems, Egypt (June 2024 - Present)
+                <p>Observed and improved manufacturing processes. Applied lean manufacturing principles.</p>
+            </div>
+            <div>
+                <strong>Production Engineer</strong> <br> EIDG (Jan 2024 - June 2024)
+                <p>Analyzed processes and supervised production quality. Acquired ISO 9001 standards knowledge.</p>
+            </div>
         </div>
 
+        <!-- Projects Section -->
         <div class="section projects">
             <h2>Projects & Achievements</h2>
-            <p><strong>Multi-Axis CNC Router Machine</strong> (2021-2022)</p>
-            <p><strong>Electric Vehicle Design</strong> (2021-2022)</p>
+            <p><strong>Multi-Axis CNC Router Machine</strong> (2021-2022) <br>
+                Designed and manufactured a CNC Router machine using SolidWorks, FEA, and other design software.
+            </p>
+            <p><strong>Electric Vehicle Design</strong> (2021-2022) <br>
+                Designed and built an electric vehicle, awarded second place in a national competition.
+            </p>
         </div>
 
+        <!-- Training Section -->
         <div class="section training">
             <h2>Courses & Training</h2>
             <ul>
                 <li>CSWP Cert Prep Course - UDEMY</li>
                 <li>Sheet Metal Works - Ali Nasser</li>
                 <li>CNC Programming & Milling Machine - Siemens</li>
+                <li>ISO 9001 & Lean Manufacturing - EIDG</li>
             </ul>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="section languages">
+            <h2>Languages</h2>
+            <p>Arabic (Native), English (Fluent)</p>
         </div>
     </div>
 </body>
